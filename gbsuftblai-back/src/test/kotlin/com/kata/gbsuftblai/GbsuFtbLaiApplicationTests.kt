@@ -8,6 +8,7 @@ class GbsuFtbLaiApplicationTests {
 
     @Test
     fun contextLoads() {
+
     }
 
 }

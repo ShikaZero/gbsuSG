@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { GbsuFtbLaiFormComponent } from './gbsu-ftb-lai-form/gbsu-ftb-lai-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { GbsuFtbLaiComponent } from './gbsu-ftb-lai/gbsu-ftb-lai.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
@@ -21,13 +21,14 @@ import { BackEndInstructionComponent } from './back-end-instruction/back-end-ins
     FrontEndInstructionComponent,
     BackEndInstructionComponent
   ],
-  imports: [
-    BrowserModule, ReactiveFormsModule, HttpClientModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent }
-    ])
-  ],
+    imports: [
+        BrowserModule, ReactiveFormsModule, HttpClientModule,
+        RouterModule.forRoot([
+            {path: '', redirectTo: 'home', pathMatch: 'full'},
+            {path: 'home', component: HomeComponent},
+            {path: 'gbsu-ftb-lai-form', component: GbsuFtbLaiComponent}
+        ]), FormsModule
+    ],
   providers: [
     { provide: 'SERVER_URL', useValue: 'http://localhost:8080' }
   ],

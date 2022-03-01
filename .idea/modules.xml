@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gbsuftblai-back/gbsu-ftb-lai.iml" filepath="$PROJECT_DIR$/gbsuftblai-back/gbsu-ftb-lai.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gbsu-ftb-lai-instruction.iml" filepath="$PROJECT_DIR$/.idea/gbsu-ftb-lai-instruction.iml" />
+    </modules>
+  </component>
+</project>
