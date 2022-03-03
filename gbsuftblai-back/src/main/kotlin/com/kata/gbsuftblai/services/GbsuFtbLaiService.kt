@@ -35,19 +35,25 @@ class GbsuFtbLaiService {
     fun buildStringNumberFrom3(inputNumber: Int): String {
         var resultValueFromInput = ""
         inputNumber.takeIf { it % 3 == 0}?.let { resultValueFromInput += "Gbsu" }
-        inputNumber.takeIf { it.toString().contains("3")}?.let { resultValueFromInput += "Gbsu" }
+        inputNumber.toString().forEach { input ->
+            input.takeIf { it.toString().contains("3")}?.let { resultValueFromInput += "Gbsu" }
+        }
         return resultValueFromInput
     }
 
     fun buildStringNumberFrom5(inputNumber: Int): String {
         var resultValueFromInput = ""
         inputNumber.takeIf { it % 5 == 0}?.let { resultValueFromInput += "Ftb" }
-        inputNumber.takeIf { it.toString().contains("5")}?.let { resultValueFromInput += "Ftb" }
+        inputNumber.toString().forEach { input ->
+            input.takeIf { it.toString().contains("5") }?.let { resultValueFromInput += "Ftb" }
+        }
         return resultValueFromInput
     }
 
     fun buildStringNumberFrom7(inputNumber: Int) =
-        inputNumber.takeIf { it.toString().contains("7") }?.let { "Lai" }.orEmpty()
+        inputNumber.toString().forEach { input ->
+            input.takeIf { it.toString().contains("7") }?.let { "Lai" }.orEmpty()
+        }
 
 }
 

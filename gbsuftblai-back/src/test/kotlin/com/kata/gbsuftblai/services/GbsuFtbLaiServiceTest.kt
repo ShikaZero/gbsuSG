@@ -127,4 +127,17 @@ internal class GbsuFtbLaiServiceTest{
         assertEquals("GbsuFtbFtb",expectedValue)
     }
 
+    @Test
+    fun `33 should return GbsuGbsuGbsu`() {
+
+        //given
+        val input = 33
+
+        //when
+        val expectedValue = gbsuFtbLaiService.convertNumber(input)
+
+        //then
+        assertEquals("GbsuGbsuGbsu",expectedValue)
+    }
+
 }
