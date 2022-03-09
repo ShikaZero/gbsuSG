@@ -18,9 +18,8 @@ export class GbsuFtbLaiComponent implements OnInit, OnDestroy {
   }
 
   convertNumber(inputNumber: number): void {
-    console.log('Hello event number parent', inputNumber);
     this.gbsuFtbLaiService.convertNumberService(inputNumber).subscribe( {
-      next: resultValue => this.numberConverteds.push({numberToConvert: inputNumber, result: resultValue.result}),
+      next: (resultValue: string) => this.numberConverteds.push({numberToConvert: inputNumber, result: resultValue}),
       error: error => this.error = error
     }
     );

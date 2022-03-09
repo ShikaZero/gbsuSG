@@ -1,11 +1,16 @@
 package com.kata.gbsuftblai.services
 
+import com.kata.gbsuftblai.stringBuilder.BuildFullInputNumber
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.context.SpringBootTest
 
-internal class GbsuFtbLaiServiceTest{
+@SpringBootTest
+internal class GbsuFtbLaiServiceTest(@Autowired private val builderFromInput: BuildFullInputNumber){
 
-    private val gbsuFtbLaiService = GbsuFtbLaiService()
+    private val gbsuFtbLaiService = GbsuFtbLaiService(builderFromInput)
+
     @Test
     fun `1 should return 1`() {
 
